@@ -19,6 +19,16 @@
 
 
 
+## How to run a Coffee Express train
+
+The Coffee Express is always looking for new conductors.
+We'll try to help you get up and running as best we can.
+
+First, after you get the CoffeeExpress code you'll want to run:
+
+    bin/bundle install
+
+
 ## URL Schema
 
     /passengers
@@ -30,6 +40,7 @@
 ## Storage Schema
 
 Arrival time: 10:14:01 Jan 6, 2016
+
 Passengers: CoffeeHound, Oblong Fellow
 
 ## Links
