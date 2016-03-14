@@ -32,7 +32,11 @@ Then you can use the `bin/rails` command to run an Express train:
 
     bin/rails server
 
-Then go to http://localhost:3000 to ride the Coffee Express!
+Then go to http://localhost:3000 to ride the Coffee Express!  This
+will use port 3000 that is accessible to your local machine.  If you
+want to serve to the larger world on port `$PORT` you might do
+
+    bin/rails s --binding=0.0.0.0 --port $PORT
 
 
 ## URL Schema
@@ -51,4 +55,7 @@ Passengers: CoffeeHound, Oblong Fellow
 
 ## Links
 
+There are lots of help for running the rails.  Here is just some of it.
+
 - http://guides.rubyonrails.org/getting_started.html
+- http://stackoverflow.com/questions/9282689/allow-public-connections-to-local-ruby-on-rails-development-server
