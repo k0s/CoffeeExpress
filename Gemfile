@@ -29,9 +29,6 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
 gem 'unicorn'
 
-# Use Rspec for testing
-gem 'rspec'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -43,3 +40,12 @@ group :development do
   gem 'spring'
 end
 
+# Testing; see
+# http://everydayrails.com/2012/03/12/testing-series-rspec-setup.html
+group :development, :test do
+
+  # Use Rspec for testing
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
