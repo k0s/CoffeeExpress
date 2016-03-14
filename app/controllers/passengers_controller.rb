@@ -6,6 +6,12 @@ class PassengersController < ApplicationController
 
   # add a new passenger
   def create
-    render plain: params[:passenger].inspect
+
   end
+
+  # passenger manifest
+  def index
+#    render plain: "All the passengers"
+  end
+
 end
