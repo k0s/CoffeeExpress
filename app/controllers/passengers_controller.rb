@@ -6,7 +6,9 @@ class PassengersController < ApplicationController
 
   # add a new passenger
   def create
-
+    @passenger = Passenger.new(params[:name])
+    @passenger.save
+    redirect_to @passenger
   end
 
   # passenger manifest
