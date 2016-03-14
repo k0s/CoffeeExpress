@@ -1,0 +1,24 @@
+<h1>New Passenger</h1>
+
+<%= form_for :passenger do |f| %>
+
+<p>
+  New to the Coffee Express train?
+  That's okay.  You can sign up here.
+</p>
+
+<p>
+  <%= f.label :name %><br/>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :saying %><br/>
+  <%= f.text_field :saying %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
