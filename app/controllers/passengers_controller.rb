@@ -6,7 +6,7 @@ class PassengersController < ApplicationController
 
   # add a new passenger
   def create
-    @passenger = Passenger.new(params[:name])
+    @passenger = Passenger.new(params.require(:passenger).permit(:name, :saying))
     @passenger.save
     redirect_to @passenger
   end
@@ -18,6 +18,7 @@ class PassengersController < ApplicationController
   # show a passenger
   def show
     @passenger = Passenger.find(params[:id])
+    puts @passenger.name
   end
 
 end
