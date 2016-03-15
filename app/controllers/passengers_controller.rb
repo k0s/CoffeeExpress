@@ -13,6 +13,7 @@ class PassengersController < ApplicationController
 
   # passenger manifest
   def index
+    @passengers = Passenger.all
   end
 
   # show a passenger

@@ -10,15 +10,21 @@
 
 <section>
   <h1>Passenger Manifest</h1>
+  hi
 
   <table>
     <tr>
       <th>Name</th>
     </tr>
 
+    <% @passengers %>
+
+    <% @passengers.each do |passenger| %>
     <tr>
-      <td>Coffee Hound!</td><td>yelalah!</td>
+      <td><% passenger.name %></td>
+      <td><% passenger.saying %></td>
     </tr>
+    <% end %>
   </table>
 </section>
 
