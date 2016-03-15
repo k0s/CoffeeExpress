@@ -15,4 +15,9 @@ class PassengersController < ApplicationController
   def index
   end
 
+  # show a passenger
+  def show
+    @passenger = Passenger.find(params[:id])
+  end
+
 end
