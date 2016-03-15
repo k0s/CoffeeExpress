@@ -13,7 +13,6 @@ class PassengersController < ApplicationController
 
   # passenger manifest
   def index
-#    render plain: "All the passengers"
   end
 
 end
