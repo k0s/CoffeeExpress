@@ -20,15 +20,15 @@
       <th>Name</th>
     </tr>
 
-    <% @passengers %>
-
     <% @passengers.each do |passenger| %>
     <tr>
-      <td><% passenger.name %></td>
-      <td><% passenger.saying %></td>
+      <td class="name"><%= passenger.name %></td>
+      <td class="saying"><%= passenger.saying %></td>
+      <td>⌫</td>
     </tr>
     <% end %>
   </table>
+
 </section>
 
 <section>

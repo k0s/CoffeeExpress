@@ -59,3 +59,4 @@ There are lots of help for running the rails.  Here is just some of it.
 
 - http://guides.rubyonrails.org/getting_started.html
 - http://stackoverflow.com/questions/9282689/allow-public-connections-to-local-ruby-on-rails-development-server
+- http://guides.rubyonrails.org/debugging_rails_applications.html
