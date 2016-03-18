@@ -31,7 +31,7 @@
 
   <ul>
     <li><%= link_to 'Our passengers', controller: 'passengers' %></li>
-    <li><a href="/passengers/new">New passenger singup</a></li>
+    <li><%= link_to 'New passenger singup', new_passenger_path %></li>
   </ul>
 
 </section>
@@ -41,6 +41,6 @@
 
   <p>
     That's okay.
-    <a href="/passengers/new">New passengers are always welcome.</a>
+    <%= link_to 'New passengers are always welcome.', new_passenger_path %>
   </p>
 </section>
