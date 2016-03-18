@@ -5,36 +5,7 @@
   That's okay.  You can sign up here.
 </p>
 
-<%= form_for :passenger, url: passengers_path do |f| %>
-
-
-<% if @passenger.errors.any? %>
-<div id="error">
-  <h2>
-    <%= pluralize(@passenger.errors.count, "error") %>
-    prohibited this passenger from being signed up:
-  </h2>
-  <ul>
-    <% @passenger.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
-
-<dl>
-  <dt><%= f.label :name %></dt>
-  <dd><%= f.text_field :name %></dd>
-
-  <dt><%= f.label :saying %></dt>
-  <dd><%= f.text_field :saying %></dd>
-</dl>
-
-<p>
-  <%= f.submit %>
-</p>
-
-<% end %>
+<%= render 'form' %>
 
 <div>
 <%= link_to 'Our passengers', passengers_path %>

@@ -41,8 +41,16 @@ class PassengersController < ApplicationController
     puts @passenger.name
   end
 
+  # remove a passenger; Good bye!
+  def destroy
+    @passenger = Passenger.find(params[:id])
+    @passenger.destroy
+
+    redirect_to passengers_path
+  end
+
   private
   def passenger_params
-    params.require(:passenger).permit(:name, :text)
+    params.require(:passenger).permit(:name, :saying)
   end
 end

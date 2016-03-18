@@ -4,38 +4,7 @@
   So you want to update the <%= @passenger.name %>?
 </p>
 
-<%= form_for :passenger, url: passenger_path(@passenger), method: :patch do |f| %>
-
-<% if @passenger.errors.any? %>
-<div id"'error">
-  <h2>
-    <%= pluralize(@passenger.errors.count, "error") %>
-    prevented this passenger from being updated:
-  </h2>
-  <ul>
-    <% @passenger.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  </ul>
-</div>
-<% end %>
-
-<dl>
-  <dt><%= f.label :name %></dt>
-  <dd><%= f.text_field :name %></dd>
-
-  <dt><%= f.label :saying %></dt>
-  <dd><%= f.text_field :saying %></dd>
-</dl>
-
-<p>
-  <%= f.submit %>
-</p>
-
-<% end %>
-
-<div>
-
-</div>
+<%= render 'form' %>
 
 <div>
   <a href="/passengers">See All Passengers</a>

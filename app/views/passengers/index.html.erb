@@ -26,7 +26,11 @@
     <tr>
       <td class="name"><a href="/passengers/<%= passenger.id %>"><%= passenger.name %></a></td>
       <td class="saying"><%= passenger.saying %></td>
-      <td>⌫</td>
+      <td>
+        <%= link_to '⌫', passenger_path(passenger),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
     <% end %>
   </table>
@@ -40,7 +44,7 @@
     New passengers are always welcome!
   </p>
 
-  <p><a href="/passengers/new">Sign up for Coffee Express</a></p>
+  <p><%= link_to 'Sign up for Coffee Express!', new_passenger_path %></p>
 </section>
 
 <a href="/" title="home">↩ Back to the station</a>

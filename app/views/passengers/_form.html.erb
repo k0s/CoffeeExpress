@@ -1,0 +1,29 @@
+<%= form_for @passenger do |f| %>
+
+<% if @passenger.errors.any? %>
+<div id"'error">
+  <h2>
+    <%= pluralize(@passenger.errors.count, "error") %>
+    prevented this passenger from on boarding:
+  </h2>
+  <ul>
+    <% @passenger.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<dl>
+  <dt><%= f.label :name %></dt>
+  <dd><%= f.text_field :name %></dd>
+
+  <dt><%= f.label :saying %></dt>
+  <dd><%= f.text_field :saying %></dd>
+</dl>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>

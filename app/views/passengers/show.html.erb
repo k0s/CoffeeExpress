@@ -6,6 +6,11 @@
   &ldquo;<%= @passenger.saying %>&rdquo;
 </p>
 
+<p>
+  Not what you expected?
+  <%= link_to 'Update', edit_passenger_path(@passenger) %>
+</p>
+
 <div>
   <a href="/passengers">See All Passengers</a>
 </div>
