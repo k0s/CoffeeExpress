@@ -2,13 +2,17 @@ class PassengersController < ApplicationController
 
   # new passenger form
   def new
+    @passenger = Passenger.new
   end
 
   # add a new passenger
   def create
     @passenger = Passenger.new(params.require(:passenger).permit(:name, :saying))
-    @passenger.save
-    redirect_to @passenger
+    if @passenger.save
+      redirect_to @passenger
+    else
+      render 'new'
+    end
   end
 
   # passenger manifest
@@ -22,4 +26,8 @@ class PassengersController < ApplicationController
     puts @passenger.name
   end
 
+  private
+  def article_params
+    params.require(:passenger).permit(:name, :text)
+  end
 end
