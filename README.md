@@ -43,7 +43,7 @@ want to serve to the larger world on port `$PORT` you might do
 
     /passengers
 
-    /passengers/CoffeeHound
+    /trains
 
     /
 
@@ -52,6 +52,16 @@ want to serve to the larger world on port `$PORT` you might do
 Arrival time: 10:14:01 Jan 6, 2016
 
 Passengers: CoffeeHound, Oblong Fellow
+
+How we started the trains rolling:
+
+    bin/rails generate model Train schedule:datetime passenger1:string passenger2:string
+
+We only have two passengers.  It's kinda sad but true.  But two
+passengers should be all we really need.  And our passengers are just
+the names of those passengers on board.  "Oh no!" you might be
+thinking.  But don't worry.  We'll make it right down the line.
+
 
 ## Links
 
