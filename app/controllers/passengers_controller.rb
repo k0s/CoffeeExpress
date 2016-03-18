@@ -5,6 +5,11 @@ class PassengersController < ApplicationController
     @passenger = Passenger.new
   end
 
+  # update a passenger
+  def edit
+    @passenger = Passenger.find(params[:id])
+  end
+
   # add a new passenger
   def create
     @passenger = Passenger.new(params.require(:passenger).permit(:name, :saying))
