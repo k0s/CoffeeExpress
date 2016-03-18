@@ -12,11 +12,21 @@ class PassengersController < ApplicationController
 
   # add a new passenger
   def create
-    @passenger = Passenger.new(params.require(:passenger).permit(:name, :saying))
+    @passenger = Passenger.new(passenger_params)
     if @passenger.save
       redirect_to @passenger
     else
       render 'new'
+    end
+  end
+
+  def update
+    @passenger = Passenger.find(params[:id])
+
+    if @passenger.update(passenger_params)
+      redirect_to @passenger
+    else
+      render 'edit'
     end
   end
 
@@ -32,7 +42,7 @@ class PassengersController < ApplicationController
   end
 
   private
-  def article_params
+  def passenger_params
     params.require(:passenger).permit(:name, :text)
   end
 end
