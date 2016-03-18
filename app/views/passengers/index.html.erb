@@ -18,11 +18,13 @@
   <table>
     <tr>
       <th>Name</th>
+      <th>Saying</th>
+      <th>Remove</th>
     </tr>
 
     <% @passengers.each do |passenger| %>
     <tr>
-      <td class="name"><%= passenger.name %></td>
+      <td class="name"><a href="/passengers/<%= passenger.id %>"><%= passenger.name %></a></td>
       <td class="saying"><%= passenger.saying %></td>
       <td>⌫</td>
     </tr>
